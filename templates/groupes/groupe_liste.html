@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "partials/header.html" %}
+
+
+<div class="container" >
+    <!-- ======= Our Services Section ======= -->
+    <section id="services" class="services ">
+       <div  >
+   
+         <div class="section-header" >
+           <h4>Liste des tontine / <a href="{% url "new_groupe" %}" >creer un groupe tontine <a/>
+           </h4>
+         </div>
+         
+         <div class="row gy-4"  >
+           {% if Groupetontines%}
+           {% for Groupetontines in Groupetontines  %}
+   
+           <div class="col-lg-4 col-md-6">
+             <div class="service-item  position-relative"  style="background-color:  rgba(4, 106, 52, 0.56)">
+               <div class="icon">
+                 <i class=""></i>
+               </div>
+               <h3>{{Groupetontines.nom}}</h3>
+               <p>Date fin  {{Groupetontines.dateFin}}.</p>
+               <a href="{% url "detail" Groupetontines.id %}" class="readmore stretched-link"> Voir plus</a>
+             </div>
+           </div><!-- End Service Item -->
+           {% endfor %}
+           {% else %}
+           <p>Vous n'avez creer aucun groupe pour le moment<p/>
+           {% endif %}
+   
+   
+   
+   
+         </div>
+   
+       </div>
+   </section><!-- End Our Services Section -->
+   </div>
+   
+
+
+
+
+
+
+
+ 
+
+{% endblock %}
+
+

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+
+
+
+{% block content %}
+{% include "partials/header.html" %}
+
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{groupe_details.nom}} </h5>
+            <p class="card-text"> Montant cotisaton : {{groupe_details.montantCotisation}}</p>
+            <p class="card-text">Fréquences paiements : {{groupe_details.frequencePaiment}} </p>
+            <p class="card-text"> Date création : {{groupe_details.dateCreation}}</p>
+            <p class="card-text"> Date fin  : {{groupe_details.dateFin|default_if_none:"Non renseigné"}}</p>
+            <button class="btn btn-lg btn-block btn-participer text-white"> <a href="{% url 'participer' groupe_details.id %}">Participer au Groupe</a> <i class="fas fa-sign-in-alt ml-2"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+{% endblock %}

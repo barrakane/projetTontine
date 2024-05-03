@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="">
+    <div class="col-md-4 m-auto">
+        <div class="card card-body">
+            <h2>Formulaire de participation</h2>
+            <form  method="POST">
+                {% csrf_token %}
+                <div class="container">
+                    <!-- name & Montant -->
+                    
+                        <div class="col-lg-12">
+                            <label for="name" class="form-label">Nom</label>
+                            <input id="name" type="text" name="name" class="form-control" required>
+
+                        </div>
+                        
+                      
+                   
+
+  `                     <div class="col-lg-12">
+                            <label for="prenom" class="form-label">Prenom</label>
+                            <input id="prenom" type="text" name="prenom" class="form-control" required>
+                        </div>
+
+                  
+                      <!-- name & Montant -->
+                      
+                        <div class="col-lg-12">
+                            <label for="telephone" class="form-label">Telephone</label>
+                            <input id="telephone" type="text" name="telephone" class="form-control" required>
+
+                        </div>
+                        
+                        <div class="col-lg-12">
+                            <label for="adress" class="form-label">Adresse</label>
+                            <input id="adress" type="text" name="adress" class="form-control" required>
+                        </div>
+        
+                   
+                </div>
+
+                
+                <div class="mt-3" style="margin-left:1.5em">
+                    <button type="submit" name="#" class="btn btn-primary">Enrégistrer</button>
+                </div>
+
+            </form>
+        <div/>
+    <div/>
+<div/>
+
+
+
+{% endblock  %}
+
+
+
+
+<!--  formulaire de connection -->
+<section>
+    <div class="container">
+        <div class="form">
+            <h2>Nom d'utilisateur:</h2>
+            <form method="post" class="connection">
+                <div class="inputBox">
+                    <input type="text" name="lemail" id="lemail" placeholder="Email" required autocomplete=off>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="lpassword" id="lpassword" placeholder="Mot de passe" required autocomplete=off>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="lpassword" id="lpassword" placeholder="Confirmation de mot de pass" required autocomplete=off>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="lpassword" id="lpassword" placeholder="Email" required autocomplete=off>
+                </div>
+                <input type="submit" class="btn btn-primary" name="formlogin" id="formlogin" value="S'inscrire" required> 
+                <!-- <p class="forget">Mot de passe oublié ? <a href="forget_pass.php">Cliquez ici</a></p> -->
+                <p class="forget">Vous n'avez pas de compte ?<a href=""> <span href="sign.php">Se connecter</span></p>  </a>   
+            </form> 
+        </div> 
+    </div>
+</section>

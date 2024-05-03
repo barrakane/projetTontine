@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* initialisation des variables dans le root */
+:root{
+    /* couleurs */
+    --color-primary: hsl(236, 100%, 65%);
+    --color-secondary:hsl(226, 87%, 80%);
+    --color-white: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-grey: hsl(252, 15%, 65%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+    --text-color: #1f1d1d;
+
+	  /* test palette de couleurs */
+	  --color-1: #696EFF;
+	  --color-2: #8178FF;
+	  --color-3: #9983FF; 
+	  --color-4: #B18DFF; 
+	  --color-5: #C897FF; 
+	  --color-6: #E0A2FF; 
+	  --color-7: #F8ACFF; 
+	  
+    /* marges */
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+    /* marges des "blocks" */
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+
+}
+/*  "reset" des parametres de toute la page */
+::before, *::after{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-dark);
+    background: var(--color-light);
+    overflow-x: hidden;
+}
+
+/* STYLE GENERAL DE LA PAGE */
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+a{
+    color: var(--color-dark);
+}
+i{
+    cursor: pointer;
+}
+i:hover{
+    opacity: 0.6;
+}
+.profil-photo{
+    width: 2.7rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1; /* width = height */
+    object-fit: cover;
+}
+.btn {
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn-primary{
+    background: var(--color-primary);
+    color: white;
+}
+.text-bold{
+    font-weight: 500;
+}
+.text-muted{
+    color: var(--color-grey);
+}
+
+
+/* ====================================================== STYLE LOGIN ============================================== */
+
+section{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: var(--color-light);
+
+}
+
+.container{
+	position: relative;
+	width: 25rem;
+	min-height: 25rem;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: var(--card-border-radius);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(5px);
+	box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+	border: 1px solid rgba(255,255,255,0.5);
+	border-right: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.form{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 2.5rem;
+}
+
+.form .inputBox{
+	width: 100%;
+	margin-top: 1.25rem;
+}
+
+.form .inputBox input{
+	width: 90%;
+	background: rgba(255, 255, 255, 0.2);
+	border: none;
+	outline: none;
+	padding: 0.6rem 1.25rem;
+	border-radius: var(--card-border-radius);
+	border: 1px solid rgba(255,255,255,0.5);
+	border-right: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	font-size: 1rem;
+	color: var(--text-color);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.form .inputBox input::placeholder{
+	color:  var(--text-color);
+	font-weight: 500;
+}
+.form  input[type="submit"]{
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	font-size: 1rem;
+}
+
+form a{
+	text-decoration: underline;
+}
+form a:hover{
+	opacity: 0.6;
+}
